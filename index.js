@@ -6,13 +6,8 @@ import { parse } from "csv-parse/sync";
 
 dotenv.config();
 
-console.log(process.env.SENDER_EMAIL);
-console.log(process.env.SENDER_PASSWORD);
-
 var transporter = nodemailer.createTransport({
-  service: "hopkins.superhosting.bg",
-  port: 587,
-  secure: true,
+  service: "gmail",
   auth: {
     user: process.env.SENDER_EMAIL,
     pass: process.env.SENDER_PASSWORD,
