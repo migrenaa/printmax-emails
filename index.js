@@ -6,8 +6,13 @@ import { parse } from "csv-parse/sync";
 
 dotenv.config();
 
+console.log(process.env.SENDER_EMAIL);
+console.log(process.env.SENDER_PASSWORD);
+
 var transporter = nodemailer.createTransport({
-  service: "gmail",
+  service: "hopkins.superhosting.bg",
+  port: 587,
+  secure: true,
   auth: {
     user: process.env.SENDER_EMAIL,
     pass: process.env.SENDER_PASSWORD,
@@ -34,6 +39,7 @@ records.forEach((record) => {
 
   var mailOptions = {
     from: process.env.SENDER_EMAIL,
+    cc: 'store@printmax.bg',
     to: record.Email,
     subject: record.Name1,
     html: html,
