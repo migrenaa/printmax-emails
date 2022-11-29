@@ -7,6 +7,8 @@ Prerequisites: node & npm
 ```
   SENDER_EMAIL=email@gmail.com
   SENDER_PASSWORD=password
+  SMTP_SERVER=gmail
+  SMTP_PORT=25
 ```
 
 5. Run node ./index.js
