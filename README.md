@@ -7,7 +7,7 @@ Prerequisites: node & npm
 ```
   SENDER_EMAIL=email@gmail.com
   SENDER_PASSWORD=password
-  SMTP_SERVER=gmail
+  SMTP_SERVER=gmail.com
   SMTP_PORT=25
 ```
 
